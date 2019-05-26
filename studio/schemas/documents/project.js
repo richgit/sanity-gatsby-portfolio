@@ -78,8 +78,8 @@ export default {
       media: 'mainImage'
     },
     prepare ({title = 'No title', publishedAt, slug, media}) {
-      const dateSegment = format(publishedAt, 'YYYY/MM')
-      const path = `/${dateSegment}/${slug.current}/`
+      const dateSegment = format(publishedAt, 'DD/MM/YYYY')
+      const path = `${slug.current} - ${dateSegment}`
       return {
         title,
         media,
