@@ -51,9 +51,6 @@ export const query = graphql`
           }
           title
           _rawExcerpt
-          slug {
-            current
-          }
         }
       }
      }
@@ -118,7 +115,6 @@ const IndexPage = props => {
 
   const articleNodes = (data || {}).articles
     ? mapEdgesToNodes(data.articles)
-      .filter(filterOutDocsWithoutSlugs)
       .filter(filterOutDocsPublishedInTheFuture)
     : []
 
@@ -142,7 +138,7 @@ const IndexPage = props => {
           />
         )}
         {articleNodes && (
-          <ProjectPreviewGrid
+          <ArticlePreviewGrid
             title='Latest articles'
             nodes={articleNodes}
             browseMoreHref='/archive/'
