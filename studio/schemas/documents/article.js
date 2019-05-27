@@ -11,6 +11,12 @@ export default {
       type: 'string'
     },
     {
+      title: 'Article URL',
+      name: 'articleUrl',
+      type: 'url',
+      validation: Rule => Rule.error('You have to enter a URL.').required(),
+    },
+    {
       name: 'publishedAt',
       title: 'Published at',
       description: 'You can use this field to schedule projects where you show them',

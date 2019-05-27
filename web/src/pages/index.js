@@ -86,6 +86,7 @@ export const query = graphql`
           }
           title
           _rawExcerpt
+          articleUrl
           slug {
             current
           }
