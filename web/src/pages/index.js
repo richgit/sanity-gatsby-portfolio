@@ -29,7 +29,6 @@ export const query = graphql`
           id
           mainImage {
             crop {
-              _key
               _type
               top
               bottom
@@ -37,7 +36,6 @@ export const query = graphql`
               right
             }
             hotspot {
-              _key
               _type
               x
               y
